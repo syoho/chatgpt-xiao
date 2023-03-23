@@ -303,7 +303,7 @@ export default function () {
             <textarea
               ref={inputRef!}
               id="input"
-              placeholder="与 ta 对话吧"
+              placeholder="Chat with ChatGPT"
               autocomplete="off"
               value={inputContent()}
               autofocus
