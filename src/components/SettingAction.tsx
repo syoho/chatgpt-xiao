@@ -29,7 +29,7 @@ export default function SettingAction(props: {
             }}
           />
         </SettingItem>
-        <SettingItem icon="i-carbon:user-online" label="系统角色指令">
+        <SettingItem icon="i-carbon:user-online" label="System character command">
           <input
             type="text"
             value={props.setting().systemRule}
@@ -42,7 +42,7 @@ export default function SettingAction(props: {
             }}
           />
         </SettingItem>
-        <SettingItem icon="i-carbon:data-enrichment" label="思维发散程度">
+        <SettingItem icon="i-carbon:data-enrichment" label="Divergence level of thinking">
           <input
             type="range"
             min={0}
@@ -61,7 +61,7 @@ export default function SettingAction(props: {
         </SettingItem>
         <SettingItem
           icon="i-carbon:save-image"
-          label="记录对话内容，刷新不会消失"
+          label="Record conversation"
         >
           <label class="relative inline-flex items-center cursor-pointer ml-1">
             <input
@@ -80,7 +80,7 @@ export default function SettingAction(props: {
         </SettingItem>
         <SettingItem
           icon="i-carbon:3d-curve-auto-colon"
-          label="开启连续对话，将加倍消耗 Token"
+          label="Enable continuous conversation"
         >
           <label class="relative inline-flex items-center cursor-pointer ml-1">
             <input
@@ -105,16 +105,16 @@ export default function SettingAction(props: {
             setShown(!shown())
           }}
           icon="i-carbon:settings"
-          label="设置"
+          label="Settings"
         />
         <div class="flex">
           <ActionItem
             onClick={exportJpg}
             icon="i-carbon:image"
-            label="导出图片"
+            label="Export image"
           />
           <ActionItem
-            label="导出 Markdown"
+            label="Export Markdown"
             onClick={async () => {
               await exportMD(props.messaages)
               setCopied(true)
@@ -127,12 +127,12 @@ export default function SettingAction(props: {
           <ActionItem
             onClick={props.reAnswer}
             icon="i-carbon:reset"
-            label="重新回答"
+            label="Answer again"
           />
           <ActionItem
             onClick={props.clear}
             icon="i-carbon:trash-can"
-            label="清空对话"
+            label="Clear conversation"
           />
         </div>
       </div>
